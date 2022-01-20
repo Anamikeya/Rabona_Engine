@@ -4,8 +4,13 @@
 
 extern Rabona::Application* Rabona::CreateApplication();
 
-void main(int argc, char** argv)
+int main(int argc, char** argv)
 {
+	Rabona::Log::Init();
+	RB_CORE_WARN("Initialized Log");
+	int a = 5;
+	RB_INFO("Hello Var={0}", a);
+	
 
 	auto app = Rabona::CreateApplication();
 	app->Run();

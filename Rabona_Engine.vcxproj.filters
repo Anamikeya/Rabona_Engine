@@ -18,7 +18,7 @@
     <ClInclude Include="Rabona\src\Rabona\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Rabona\src\Rabona\core.h">
+    <ClInclude Include="Rabona\src\Rabona\Core.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Rabona\src\Rabona.h">
@@ -27,9 +27,15 @@
     <ClInclude Include="Rabona\src\Rabona\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Rabona\src\Rabona\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rabona\src\Rabona\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rabona\src\Rabona\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -19,13 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Rabona\src\Rabona\Log.h" />
     <ClInclude Include="Rabona\src\Rabona.h" />
     <ClInclude Include="Rabona\src\Rabona\Application.h" />
-    <ClInclude Include="Rabona\src\Rabona\core.h" />
+    <ClInclude Include="Rabona\src\Rabona\Core.h" />
     <ClInclude Include="Rabona\src\Rabona\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Rabona\src\Rabona\Application.cpp" />
+    <ClCompile Include="Rabona\src\Rabona\Log.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -125,8 +127,9 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>RB_PLATFORM_WINDOWS;RB_BUILD_DLL; _BUILD_DLL_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;RB_PLATFORM_WINDOWS;RB_BUILD_DLL; _BUILD_DLL_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Rabona\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,6 +144,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>RB_PLATFORM_WINDOWS;RB_BUILD_DLL; _BUILD_DLLNDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Rabona\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
