@@ -3,6 +3,6 @@
 
 
 #include "Rabona/Application.h"
-#include "Rabona/Log.h"
-//------Entry pooint--------------
+
+//------Entry point--------------
 #include"Rabona/EntryPoint.h"

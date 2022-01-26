@@ -2,8 +2,8 @@
 
 #ifdef RB_PLATFORM_WINDOWS
 
-extern Rabona::Application* Rabona::CreateApplication();
 
+extern Rabona::Application* Rabona::CreateApplication();
 int main(int argc, char** argv)
 {
 	Rabona::Log::Init();
@@ -15,6 +15,7 @@ int main(int argc, char** argv)
 	auto app = Rabona::CreateApplication();
 	app->Run();
 	delete app;
+	return 0;
 }
 
 #endif

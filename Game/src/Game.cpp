@@ -1,5 +1,4 @@
 #include<Rabona.h>
-
 class Game : public Rabona::Application
 {
 public:
@@ -12,8 +11,6 @@ public:
 
 	}
 };
-
-
 Rabona::Application* Rabona::CreateApplication()
 {
 	return new Game();
