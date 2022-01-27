@@ -12,8 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Rabona/vendor/GLFW/include"
+IncludeDir["Glad"] = "Rabona/vendor/Glad/include"
 
 include "Rabona/vendor/GLFW"
+include "Rabona/vendor/Glad"
 
 project "Rabona"
 	location"Rabona"
@@ -36,11 +38,13 @@ project "Rabona"
 	{
 		"Rabona/src",
 		"Rabona/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -53,7 +57,8 @@ project "Rabona"
 		{
 
 			"RB_PLATFORM_WINDOWS",
-			"RB_BUILD_DLL"
+			"RB_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 	postbuildcommands
@@ -63,15 +68,18 @@ project "Rabona"
 
 	filter "configurations:Debug"
 		defines "RB_DEBUG"
+		buildoptions "/MDd"
 		symbols "on"
 	
 	
 	filter "configurations:Release"
 		defines "RB_RELEASE"
+		buildoptions "/MD"
 		optimize "on"
 		
 	filter "configurations:Dist"
 		defines "RB_DIST"
+		buildoptions "/MD"
 		optimize "on"
 
 project "Game"
@@ -113,15 +121,18 @@ project "Game"
 		}
 
 	filter "configurations:Debug"
-	defines "RB_DEBUG"
-	symbols "on"
+		defines "RB_DEBUG"
+		buildoptions "/MDd"
+		symbols "on"
 
 
 	filter "configurations:Release"
-		defines "RB_RELEASE"
+		defines "RBs_RELEASE"
+		buildoptions "/MD"
 		optimize "on"
 		
 	filter "configurations:Dist"
 		defines "RB_DIST"
+		buildoptions "/MD"
 		optimize "on"
 

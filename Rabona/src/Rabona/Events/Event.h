@@ -45,6 +45,8 @@ namespace Rabona {
 			return GetCategoryFlags() & category;
 		}
 
+		bool getHandled() { return m_Handled; }
+
 	protected:
 		bool m_Handled = false;
 
@@ -71,6 +73,7 @@ namespace Rabona {
 		}
 	private:
 		Event& m_Event;
+	
 	};
 
 	inline std::ostream& operator<<(std::ostream& os, const Event& e)

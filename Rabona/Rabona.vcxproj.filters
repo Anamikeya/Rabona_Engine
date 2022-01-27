@@ -15,6 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\Window\WindowsWindow.h">
+      <Filter>Platform\Window</Filter>
+    </ClInclude>
     <ClInclude Include="src\Rabona.h" />
     <ClInclude Include="src\Rabona\Application.h">
       <Filter>Rabona</Filter>
@@ -37,6 +40,12 @@
     <ClInclude Include="src\Rabona\Events\MouseEvent.h">
       <Filter>Rabona\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Rabona\Layer.h">
+      <Filter>Rabona</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rabona\LayerStack.h">
+      <Filter>Rabona</Filter>
+    </ClInclude>
     <ClInclude Include="src\Rabona\Log.h">
       <Filter>Rabona</Filter>
     </ClInclude>
@@ -44,16 +53,23 @@
       <Filter>Rabona</Filter>
     </ClInclude>
     <ClInclude Include="src\Rbpch.h" />
-    <ClInclude Include="src\Platform\Window\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\Window\WindowsWindow.cpp">
+      <Filter>Platform\Window</Filter>
+    </ClCompile>
     <ClCompile Include="src\Rabona\Application.cpp">
+      <Filter>Rabona</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Rabona\Layer.cpp">
+      <Filter>Rabona</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Rabona\LayerStack.cpp">
       <Filter>Rabona</Filter>
     </ClCompile>
     <ClCompile Include="src\Rabona\Log.cpp">
       <Filter>Rabona</Filter>
     </ClCompile>
     <ClCompile Include="src\Rbpch.cpp" />
-    <ClCompile Include="src\Platform\Window\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

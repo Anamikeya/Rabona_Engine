@@ -1,8 +1,7 @@
 #pragma once
 
-#include"Rabona/Window.h"
-#include<GLFW/glfw3.h>
-
+#include "Rabona/Window.h"
+#include "GLFW/glfw3.h"
 
 namespace Rabona {
 	class WindowsWindow : public Window
