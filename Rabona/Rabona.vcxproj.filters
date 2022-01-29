@@ -13,6 +13,12 @@
     <Filter Include="Rabona\Events">
       <UniqueIdentifier>{FCF59491-68B6-10C8-31F1-59459D7055A4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Rabona\ImGui">
+      <UniqueIdentifier>{42DCDABE-2E3F-6A63-D7C4-A219C30636E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rabona\ImGui\OpenGL">
+      <UniqueIdentifier>{36E7E0A3-A248-BEB1-2BB6-04649716F570}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Platform\Window\WindowsWindow.h">
@@ -40,6 +46,12 @@
     <ClInclude Include="src\Rabona\Events\MouseEvent.h">
       <Filter>Rabona\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Rabona\ImGui\ImGuiLayer.h">
+      <Filter>Rabona\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Rabona\ImGui\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Rabona\Layer.h">
       <Filter>Rabona</Filter>
     </ClInclude>
@@ -60,6 +72,12 @@
     </ClCompile>
     <ClCompile Include="src\Rabona\Application.cpp">
       <Filter>Rabona</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Rabona\ImGui\ImGuiLayer.cpp">
+      <Filter>Rabona\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Rabona\ImGui\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Rabona\Layer.cpp">
       <Filter>Rabona</Filter>

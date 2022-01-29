@@ -13,9 +13,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Rabona/vendor/GLFW/include"
 IncludeDir["Glad"] = "Rabona/vendor/Glad/include"
+IncludeDir["ImGui"] = "Rabona/vendor/imgui"
 
 include "Rabona/vendor/GLFW"
 include "Rabona/vendor/Glad"
+include "Rabona/vendor/imgui"
+
 
 project "Rabona"
 	location"Rabona"
@@ -39,12 +42,14 @@ project "Rabona"
 		"Rabona/src",
 		"Rabona/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 	links
 	{
 		"GLFW",
 		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 

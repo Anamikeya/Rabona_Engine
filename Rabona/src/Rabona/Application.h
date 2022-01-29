@@ -18,6 +18,8 @@ namespace Rabona
 		void PushOverlay(Layer* layer);
 		void Run();
 		void OnEvent(Event& e);
+		inline static Application& Get() { return *s_Instance; }
+		inline Window& GetWindow() { return *m_Window; }
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 		
@@ -25,6 +27,10 @@ namespace Rabona
 		bool m_Running;
 
 		LayerStack m_LayerStack;
+
+	private:
+		static Application* s_Instance;
+
 
 	};
 
