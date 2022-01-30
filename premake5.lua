@@ -24,6 +24,7 @@ project "Rabona"
 	location"Rabona"
 	kind "SharedLib"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/".. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/".. outputdir .. "/%{prj.name}")
@@ -55,7 +56,6 @@ project "Rabona"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "on"
 		systemversion "latest"
 
 		defines
@@ -73,24 +73,25 @@ project "Rabona"
 
 	filter "configurations:Debug"
 		defines "RB_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "on"
 	
 	
 	filter "configurations:Release"
 		defines "RB_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "on"
 		
 	filter "configurations:Dist"
 		defines "RB_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "on"
 
 project "Game"
 	location "Game"
 	kind "ConsoleApp"
 	language "C++"
+	staticruntime "off"
 
 	targetdir("bin/".. outputdir .. "/%{prj.name}")
 	objdir("bin-int/".. outputdir .. "/%{prj.name}")
@@ -127,17 +128,17 @@ project "Game"
 
 	filter "configurations:Debug"
 		defines "RB_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "on"
 
 
 	filter "configurations:Release"
 		defines "RBs_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "on"
 		
 	filter "configurations:Dist"
 		defines "RB_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "on"
 

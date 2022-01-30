@@ -4,6 +4,9 @@
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform\Window">
       <UniqueIdentifier>{D1E05B2F-3D6C-C9F3-467D-4CE8B28725F4}</UniqueIdentifier>
     </Filter>
@@ -16,11 +19,11 @@
     <Filter Include="Rabona\ImGui">
       <UniqueIdentifier>{42DCDABE-2E3F-6A63-D7C4-A219C30636E6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Rabona\ImGui\OpenGL">
-      <UniqueIdentifier>{36E7E0A3-A248-BEB1-2BB6-04649716F570}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Window\WindowsWindow.h">
       <Filter>Platform\Window</Filter>
     </ClInclude>
@@ -49,9 +52,6 @@
     <ClInclude Include="src\Rabona\ImGui\ImGuiLayer.h">
       <Filter>Rabona\ImGui</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
-      <Filter>Rabona\ImGui\OpenGL</Filter>
-    </ClInclude>
     <ClInclude Include="src\Rabona\Layer.h">
       <Filter>Rabona</Filter>
     </ClInclude>
@@ -67,6 +67,9 @@
     <ClInclude Include="src\Rbpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Window\WindowsWindow.cpp">
       <Filter>Platform\Window</Filter>
     </ClCompile>
@@ -75,9 +78,6 @@
     </ClCompile>
     <ClCompile Include="src\Rabona\ImGui\ImGuiLayer.cpp">
       <Filter>Rabona\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
-      <Filter>Rabona\ImGui\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Rabona\Layer.cpp">
       <Filter>Rabona</Filter>
