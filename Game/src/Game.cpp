@@ -1,11 +1,15 @@
 #include<Rabona.h>
 
+
+
 class ExampleLayer : public Rabona::Layer
 {
 public:
 	ExampleLayer()
 		:Layer("Example")
-	{}
+	{
+		
+	}
 
 	void OnUpdate() override
 	{

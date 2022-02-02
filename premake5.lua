@@ -15,6 +15,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Rabona/vendor/GLFW/include"
 IncludeDir["Glad"] = "Rabona/vendor/Glad/include"
 IncludeDir["ImGui"] = "Rabona/vendor/imgui"
+IncludeDir["glm"] = "Rabona/vendor/glm"
 
 include "Rabona/vendor/GLFW"
 include "Rabona/vendor/Glad"
@@ -36,7 +37,9 @@ project "Rabona"
 	files
 	{
 		"Rabona/src/**.h",
-		"Rabona/src/**.cpp"
+		"Rabona/src/**.cpp",
+		"Rabona/vendor/glm/glm/**.hpp",
+		"Rabona/vendor/glm/glm/**.inl"
 	}
 
 	includedirs
@@ -45,7 +48,8 @@ project "Rabona"
 		"Rabona/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 	links
 	{
@@ -107,7 +111,8 @@ project "Game"
 	includedirs
 	{
 		"Rabona/vendor/spdlog/include",
-		"Rabona/src"
+		"Rabona/src",
+		"%{IncludeDir.glm}"
 	}
 
 	links
