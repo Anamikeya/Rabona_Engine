@@ -11,10 +11,12 @@
 namespace Rabona {
 	static bool s_GLFWInitialized = false;
 
+	
 	static void GLFWErrorCallback(int error, const char* description)
 	{
 		RB_CORE_ERROR("GLFW Error ({0}) : {1}",error, description);
 	}
+
 	Window* Window::Create(const WindowProps& props)
 	{
 		return new WindowsWindow(props);

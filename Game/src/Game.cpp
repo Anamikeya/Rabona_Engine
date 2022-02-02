@@ -9,12 +9,19 @@ public:
 
 	void OnUpdate() override
 	{
-		RB_INFO("ExampleLayer::Update");
+
+		if (Rabona::Input::IsKeyPressed(RB_KEY_TAB))
+			RB_INFO("Tab Key is Pressed!");
 	}
 
 	void OnEvent(Rabona::Event& event) override
 	{
-		RB_TRACE("{0}", event);
+		if (event.GetEventType() == Rabona::EventType::KeyPressed)
+		{
+			Rabona::KeyPressedEvent& e = (Rabona::KeyPressedEvent&)event;
+			RB_TRACE("{0}",(char)e.GetKeyCode());
+		}
+		//RB_TRACE("{0}", event);
 	}
 };
 

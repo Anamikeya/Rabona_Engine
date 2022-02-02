@@ -1,5 +1,6 @@
 workspace "Rabona_Engine"
 	architecture "x64"
+	startproject "Game"
 
 	configurations
 	{
@@ -68,7 +69,7 @@ project "Rabona"
 
 	postbuildcommands
 	{
-		("{COPY} %{cfg.buildtarget.relpath} ../bin/" ..outputdir .."/Game")
+		("{COPY} %{cfg.buildtarget.relpath} \"../bin/" ..outputdir .."/Game/\"")
 	}
 
 	filter "configurations:Debug"
@@ -116,7 +117,7 @@ project "Game"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "on"
+		staticruntime "off"
 		systemversion "latest"
 
 		defines

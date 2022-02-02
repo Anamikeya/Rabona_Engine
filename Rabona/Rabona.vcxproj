@@ -93,7 +93,7 @@
       <ImportLibrary>..\bin\Debug-windows-x86_64\Rabona\Rabona.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Rabona\Rabona.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Rabona\Rabona.dll ..\bin\Debug-windows-x86_64\Game &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Rabona\Rabona.dll ..\bin\Debug-windows-x86_64\Game &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Rabona\Rabona.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Rabona\Rabona.dll "..\bin\Debug-windows-x86_64\Game\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Rabona\Rabona.dll "..\bin\Debug-windows-x86_64\Game\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -119,7 +119,7 @@
       <ImportLibrary>..\bin\Release-windows-x86_64\Rabona\Rabona.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-windows-x86_64\Rabona\Rabona.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Rabona\Rabona.dll ..\bin\Release-windows-x86_64\Game &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Rabona\Rabona.dll ..\bin\Release-windows-x86_64\Game &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Release-windows-x86_64\Rabona\Rabona.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Rabona\Rabona.dll "..\bin\Release-windows-x86_64\Game\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Rabona\Rabona.dll "..\bin\Release-windows-x86_64\Game\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -145,11 +145,12 @@
       <ImportLibrary>..\bin\Dist-windows-x86_64\Rabona\Rabona.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Rabona\Rabona.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Rabona\Rabona.dll ..\bin\Dist-windows-x86_64\Game &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Rabona\Rabona.dll ..\bin\Dist-windows-x86_64\Game &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Rabona\Rabona.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Rabona\Rabona.dll "..\bin\Dist-windows-x86_64\Game\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Rabona\Rabona.dll "..\bin\Dist-windows-x86_64\Game\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\Window\WindowsInput.h" />
     <ClInclude Include="src\Platform\Window\WindowsWindow.h" />
     <ClInclude Include="src\Rabona.h" />
     <ClInclude Include="src\Rabona\Application.h" />
@@ -160,14 +161,18 @@
     <ClInclude Include="src\Rabona\Events\KeyEvent.h" />
     <ClInclude Include="src\Rabona\Events\MouseEvent.h" />
     <ClInclude Include="src\Rabona\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Rabona\Input.h" />
+    <ClInclude Include="src\Rabona\KeyCode.h" />
     <ClInclude Include="src\Rabona\Layer.h" />
     <ClInclude Include="src\Rabona\LayerStack.h" />
     <ClInclude Include="src\Rabona\Log.h" />
+    <ClInclude Include="src\Rabona\MouseButtonKeyCodes.h" />
     <ClInclude Include="src\Rabona\Window.h" />
     <ClInclude Include="src\Rbpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\Window\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Window\WindowsWindow.cpp" />
     <ClCompile Include="src\Rabona\Application.cpp" />
     <ClCompile Include="src\Rabona\ImGui\ImGuiLayer.cpp" />

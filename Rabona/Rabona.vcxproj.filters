@@ -24,6 +24,9 @@
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
       <Filter>Platform\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\Window\WindowsInput.h">
+      <Filter>Platform\Window</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Window\WindowsWindow.h">
       <Filter>Platform\Window</Filter>
     </ClInclude>
@@ -52,6 +55,9 @@
     <ClInclude Include="src\Rabona\ImGui\ImGuiLayer.h">
       <Filter>Rabona\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\Rabona\Input.h">
+      <Filter>Rabona</Filter>
+    </ClInclude>
     <ClInclude Include="src\Rabona\Layer.h">
       <Filter>Rabona</Filter>
     </ClInclude>
@@ -65,10 +71,15 @@
       <Filter>Rabona</Filter>
     </ClInclude>
     <ClInclude Include="src\Rbpch.h" />
+    <ClInclude Include="src\Rabona\KeyCode.h" />
+    <ClInclude Include="src\Rabona\MouseButtonKeyCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
       <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Window\WindowsInput.cpp">
+      <Filter>Platform\Window</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Window\WindowsWindow.cpp">
       <Filter>Platform\Window</Filter>

@@ -2,7 +2,7 @@
 #include "Application.h"
 #include "Rabona/Log.h"
 #include "glad/glad.h"
-
+#include "Input.h"
 
 namespace Rabona {
 
@@ -43,7 +43,7 @@ namespace Rabona {
 	{
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
-		RB_CORE_INFO("{0}",e);
+		//RB_CORE_INFO("{0}",e);
 
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin();)
 		{
@@ -64,7 +64,11 @@ namespace Rabona {
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
-
+			auto [x, y] = Input::GetMousePosition();
+		
+			//RB_CORE_TRACE("{0},{1}", x, y);
+			
+			
 			m_Window->OnUpdate();
 		}
 		
