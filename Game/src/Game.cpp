@@ -35,7 +35,6 @@ public:
 	Game()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Rabona::ImGuiLayer());
 	}
 	~Game()
 	{

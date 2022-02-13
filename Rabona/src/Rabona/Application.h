@@ -4,6 +4,7 @@
 #include "Rabona/LayerStack.h"
 #include "Events/Event.h"
 #include "Rabona/Events/ApplicationEvent.h"
+#include "Rabona/ImGui/ImGuiLayer.h"
 #include "Window.h"
 
 namespace Rabona
@@ -20,10 +21,12 @@ namespace Rabona
 		void OnEvent(Event& e);
 		inline static Application& Get() { return *s_Instance; }
 		inline Window& GetWindow() { return *m_Window; }
+	
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 		
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running;
 
 		LayerStack m_LayerStack;

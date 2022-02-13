@@ -112,6 +112,7 @@ project "Game"
 	{
 		"Rabona/vendor/spdlog/include",
 		"Rabona/src",
+		"Rabona/vendor",
 		"%{IncludeDir.glm}"
 	}
 

@@ -7,9 +7,6 @@
     <Filter Include="src\Platform">
       <UniqueIdentifier>{21CA02E5-0D2D-9289-B6B2-CA3FA2F45D0C}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Platform\OpenGL">
-      <UniqueIdentifier>{35A49437-A105-7245-2A73-B8F796D3A804}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\Platform\Window">
       <UniqueIdentifier>{E807C449-5469-A157-DDD6-E7094937D816}</UniqueIdentifier>
     </Filter>
@@ -45,9 +42,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
-      <Filter>src\Platform\OpenGL</Filter>
-    </ClInclude>
     <ClInclude Include="src\Platform\Window\WindowsInput.h">
       <Filter>src\Platform\Window</Filter>
     </ClInclude>
@@ -77,6 +71,9 @@
     </ClInclude>
     <ClInclude Include="src\Rabona\Events\MouseEvent.h">
       <Filter>src\Rabona\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rabona\ImGui\ImGuiBuild.h">
+      <Filter>src\Rabona\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="src\Rabona\ImGui\ImGuiLayer.h">
       <Filter>src\Rabona\ImGui</Filter>
@@ -1352,9 +1349,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
-      <Filter>src\Platform\OpenGL</Filter>
-    </ClCompile>
     <ClCompile Include="src\Platform\Window\WindowsInput.cpp">
       <Filter>src\Platform\Window</Filter>
     </ClCompile>
@@ -1363,6 +1357,9 @@
     </ClCompile>
     <ClCompile Include="src\Rabona\Application.cpp">
       <Filter>src\Rabona</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Rabona\ImGui\ImGuiBuild.cpp">
+      <Filter>src\Rabona\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Rabona\ImGui\ImGuiLayer.cpp">
       <Filter>src\Rabona\ImGui</Filter>
