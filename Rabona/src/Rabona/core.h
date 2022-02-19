@@ -1,13 +1,19 @@
 #pragma once
 
 #ifdef RB_PLATFORM_WINDOWS
+
+#if HZ_DYNAMIC_LINK
 	#ifdef RB_BUILD_DLL
 		#define RABONA_API __declspec(dllexport)
 	#else
 		#define RABONA_API __declspec(dllimport)
 	#endif
 #else
-	#error Rabona only supports windows
+	#define RABONA_API
+#endif
+	#else
+		#error Rabona only supports windows
+
 #endif
 
 

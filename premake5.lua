@@ -24,9 +24,10 @@ include "Rabona/vendor/imgui"
 
 project "Rabona"
 	location"Rabona"
-	kind "SharedLib"
+	kind "StaticLib"
 	language "C++"
-	staticruntime "off"
+	cppdialect "C++17"
+	staticruntime "on"
 
 	targetdir ("bin/".. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/".. outputdir .. "/%{prj.name}")
@@ -40,6 +41,11 @@ project "Rabona"
 		"Rabona/src/**.cpp",
 		"Rabona/vendor/glm/glm/**.hpp",
 		"Rabona/vendor/glm/glm/**.inl"
+	}
+
+	defines
+	{
+		"_CRT_SECURE_NO_WARNINGS"
 	}
 
 	includedirs
@@ -60,7 +66,6 @@ project "Rabona"
 	}
 
 	filter "system:windows"
-		cppdialect "C++17"
 		systemversion "latest"
 
 		defines
@@ -68,13 +73,9 @@ project "Rabona"
 
 			"RB_PLATFORM_WINDOWS",
 			"RB_BUILD_DLL",
-			"GLFW_INCLUDE_NONE"
+			"GLFW_INCLUDE_NONE",
+			"CRT_SECURE_NO_WARNINGS"
 		}
-
-	postbuildcommands
-	{
-		("{COPY} %{cfg.buildtarget.relpath} \"../bin/" ..outputdir .."/Game/\"")
-	}
 
 	filter "configurations:Debug"
 		defines "RB_DEBUG"
@@ -96,7 +97,8 @@ project "Game"
 	location "Game"
 	kind "ConsoleApp"
 	language "C++"
-	staticruntime "off"
+	cppdialect "C++17"
+	staticruntime "on"
 
 	targetdir("bin/".. outputdir .. "/%{prj.name}")
 	objdir("bin-int/".. outputdir .. "/%{prj.name}")
@@ -122,15 +124,13 @@ project "Game"
 	}
 
 	filter "system:windows"
-		cppdialect "C++17"
-		staticruntime "off"
 		systemversion "latest"
 
 		defines
 		{
 
 			"RB_PLATFORM_WINDOWS",
-			"RB_ENABLE_ASSERTS"
+
 		}
 
 	filter "configurations:Debug"
@@ -140,7 +140,7 @@ project "Game"
 
 
 	filter "configurations:Release"
-		defines "RBs_RELEASE"
+		defines "RB_RELEASE"
 		runtime "Release"
 		optimize "on"
 		
